@@ -1,20 +1,8 @@
-import {
-  Heading,
-  VStack,
-  Text,
-  Divider,
-  Box,
-  FormControl,
-  FormLabel,
-  InputGroup,
-  InputLeftElement,
-  Icon,
-  Input,
-} from '@chakra-ui/react';
+import { Heading, VStack, Text, Divider, Box } from '@chakra-ui/react';
 import ButtonCustom from '../components/ButtonCustom';
 import PageContainer from '../layouts/PageContainer';
-import { FaRegEnvelope, FaLock } from 'react-icons/fa';
 import Footer from '../layouts/Footer';
+import FormControlCustom from '../components/FormControlCustom';
 
 const Login = () => {
   return (
@@ -23,33 +11,22 @@ const Login = () => {
         <Heading marginBottom={'1.5rem'}>Login</Heading>
         <form>
           <VStack>
-            <FormControl>
-              <FormLabel htmlFor="email">Email Address</FormLabel>
-              <InputGroup>
-                <InputLeftElement children={<Icon as={FaRegEnvelope} />} />
-                <Input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="name@example.com"
-                  focusBorderColor="teal.400"
-                />
-              </InputGroup>
-            </FormControl>
+            <FormControlCustom
+              identifier="email"
+              labelText="Email Address"
+              inputType="email"
+              placeholder="name@example.com"
+              iconFA="FaUser"
+            />
 
-            <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
-              <InputGroup>
-                <InputLeftElement children={<Icon as={FaLock} />} />
-                <Input
-                  name="password"
-                  id="password"
-                  type="password"
-                  placeholder="Enter your password"
-                  focusBorderColor="teal.400"
-                />
-              </InputGroup>
-            </FormControl>
+            <FormControlCustom
+              identifier="password"
+              labelText="Password"
+              inputType="password"
+              placeholder="Enter your password"
+              iconFA="FaLock"
+            />
+
             <ButtonCustom width="100%">Sign in</ButtonCustom>
 
             <Divider pt={4} />
