@@ -14,6 +14,7 @@ import {
 import ButtonCustom from '../components/ButtonCustom';
 import PageContainer from '../layouts/PageContainer';
 import { FaRegEnvelope, FaLock } from 'react-icons/fa';
+import Footer from '../layouts/Footer';
 
 const Login = () => {
   return (
@@ -59,6 +60,7 @@ const Login = () => {
           </VStack>
         </form>
       </Box>
+      <Footer />
     </PageContainer>
   );
 };
