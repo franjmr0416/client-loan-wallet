@@ -3,10 +3,12 @@ import ButtonCustom from '../components/ButtonCustom';
 import PageContainer from '../layouts/PageContainer';
 import Footer from '../layouts/Footer';
 import FormControlCustom from '../components/FormControlCustom';
+import Nav from '../layouts/Nav';
 
 const Login = () => {
   return (
     <PageContainer>
+      <Nav />
       <Box bg="white" rounded="lg" p={5} m={5} boxShadow="lg">
         <Heading marginBottom={'1.5rem'}>Login</Heading>
         <form>
